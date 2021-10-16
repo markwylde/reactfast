@@ -1,0 +1,41 @@
+name: Build and Deploy
+on:
+  pull_request:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+        with:
+          fetch-depth: 0
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.3
+        with:
+          branch: gh-pages
+          folder: dist
+          clean: false
+          target-folder: ${{ github.sha }}
+
+      - name: Comment on Pull Request
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const subfolder = process.env.GITHUB_SHA;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: [
+                '👋 Preview deployed to:',
+                'https://markwylde.github.io/reactfast/' + subfolder
+              ].join('\n')
+            })
