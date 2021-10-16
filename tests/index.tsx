@@ -5,6 +5,14 @@ import test from 'basictap';
 import render from './helpers/render';
 import App from '../src/pages/App';
 
+test('App - has header', t => {
+  t.plan(1);
+
+  const { container } = render(<App />);
+
+  t.ok(container.textContent?.includes('ReactFast'), 'has header');
+});
+
 test('App - has default first item', t => {
   t.plan(1);
 
