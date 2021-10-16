@@ -12,6 +12,7 @@ export function App () {
 
   return (
     <div>
+      <h1>ReactFast</h1>
       <div>Items:</div>
       <ul>
         {items.map((item, itemIndex) => <li key={itemIndex}>{item}</li>)}
