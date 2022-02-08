@@ -4,7 +4,9 @@
   "description": "A fast and simple way to build testable react apps",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && servatron -d dist",
+    "start": "npm run build && servatron --spa -d dist",
+    "develop": "servatron --spa -d dist & npm run watch",
+    "watch": "cp src/index.html dist/index.html & esbuild --watch --minify --bundle ./src/index.tsx --outdir=./dist --loader:.js=jsx",
     "build": "esbuild --minify --bundle ./src/index.tsx --outdir=./dist --loader:.js=jsx && cp src/index.html dist/index.html",
     "test": "c8 node -r sucrase/register tests",
     "lint": "eslint ."
@@ -13,23 +15,23 @@
   "author": "Mark Wylde <me@markwylde.com> (https://github.com/markwylde)",
   "license": "MIT",
   "devDependencies": {
-    "@types/react": "^17.0.30",
-    "@types/react-dom": "^17.0.9",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
     "basictap": "^3.1.0",
-    "c8": "^7.10.0",
-    "esbuild": "^0.13.7",
+    "c8": "^7.11.0",
+    "esbuild": "^0.14.20",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.26.1",
-    "linkedom": "^0.12.1",
+    "linkedom": "^0.13.2",
     "semistandard": "^16.0.1",
     "servatron": "^2.2.3",
-    "sucrase": "^3.20.2"
+    "sucrase": "^3.20.3"
   },
   "dependencies": {
     "react": "^17.0.2",
