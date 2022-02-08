@@ -1,4 +1,4 @@
-import React from 'react';
+import { h, Component, render } from 'preact';
 import { Simulate } from 'react-dom/test-utils';
 import test from 'basictap';
 

@@ -1,10 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { h, Component, render } from 'preact';
 
 import App from './pages/App';
 
 document.addEventListener('DOMContentLoaded', function () {
   const container = document.body.children[0];
-  ReactDOM.render(<App />, container);
+  render(<App />, container);
   document.title = 'ReactFast';
 });

@@ -1,35 +1,9 @@
-import React from 'react';
-import styled from 'styled-components'
-
-const Wrapper = styled.div({
-  fontWeight: 'bold',
-  nav: {
-    ul: {
-      padding: 0,
-      margin: 0,
-      li: {
-        display: 'inline-block',
-        margin: '0 0 0 -8px',
-        a: {
-          textDecoration: 'none',
-          display: 'inline-block',
-          padding: '3px 5px',
-          margin: '3px',
-          backgroundColor: 'white',
-          borderRadius: '3px'
-        },
-        'a:hover': {
-          backgroundColor: 'rgb(234 234 234)'
-        }
-      }
-    }
-  }
-});
+import { h, Component, render } from 'preact';
 
 function Header () {
   return (
-    <Wrapper>
-      ReactFast
+    <div className="header">
+      <span>ReactFast</span>
 
       <nav>
         <ul>
@@ -39,7 +13,7 @@ function Header () {
           <li><a href="/dynamic">Dynamic</a></li>
         </ul>
       </nav>
-    </Wrapper>
+    </div>
   );
 }
 

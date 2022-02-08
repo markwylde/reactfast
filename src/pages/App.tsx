@@ -1,4 +1,4 @@
-import React from 'react';
+import { h, Component, render } from 'preact';
 import HomePage from './Home';
 import DynamicPage from './Dynamic';
 import SEOPage from './SEO';

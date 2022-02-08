@@ -1,4 +1,4 @@
-import React from 'react';
+import { h, Component, render } from 'preact';
 import Header from '../components/Header';
 
 export function SEO () {
