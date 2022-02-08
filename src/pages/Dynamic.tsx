@@ -1,8 +1,9 @@
 import { h, Component, render } from 'preact';
+import { useState } from 'preact/hooks';
 import Header from '../components/Header';
 
 export function Dynamic () {
-  const [items, setItems] = React.useState(['first item']);
+  const [items, setItems] = useState(['first item']);
 
   const handleAddItem = () => {
     setItems([
