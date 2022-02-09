@@ -7,6 +7,10 @@
   margin: 0 0 0 -8px;
 }
 
+.header nav ul li:not(:last-child):after {
+  content: '';
+  border-right: 1px solid black;
+}
 .header nav ul li {
   display: inline-block;
 }
@@ -14,11 +18,12 @@
 .header nav ul li a {
   text-decoration: none;
   display: inline-block;
-  padding: 10px;
+  padding: 8px;
+  margin: 2px;
   background-color: white;
   border-radius: 3px;
 }
 
 .header nav ul li a:hover {
-  background-color: rgb(189, 189, 189);
+  text-decoration: underline;
 }
