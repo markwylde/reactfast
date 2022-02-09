@@ -12,6 +12,16 @@ export function NotFound () {
       <Header />
       <h1>Page Not Found</h1>
       <p>The page you are trying to access could not be found.</p>
+      <h2>Curious about SEO?</h2>
+      <p>
+        This page (like every page on the site) is returned from the server
+        with a 200 status code. But, this isn't exactly great for SEO.
+      </p>
+      <p>
+        But never fear. There is a <code>meta</code> tag on this page to set
+        <code>robots</code> to <code>noindex</code>. This means Google, and other
+        compliant search engines, will not index this page.
+      </p>
     </div>
   );
 }

@@ -10,6 +10,7 @@ function Header () {
           <li><a href="/">Home</a></li>
           <li><a href="/seo">Seo</a></li>
           <li><a href="/about">About</a></li>
+          <li><a href="/not-found">Not Found Page</a></li>
           <li><a href="/dynamic">Dynamic</a></li>
         </ul>
       </nav>

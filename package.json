@@ -8,7 +8,7 @@
     "develop": "servatron --spa -d dist & npm run watch",
     "watch": "npm run build:static & esbuild --watch --minify --bundle ./src/index.tsx --outdir=./dist --jsx-factory=h --jsx-fragment=Fragment --loader:.js=jsx",
     "build": "esbuild --minify --bundle ./src/index.tsx --outdir=./dist --jsx-factory=h --jsx-fragment=Fragment --loader:.js=jsx && npm run build:static",
-    "build:static": "cp src/index.html dist/index.html && cp src/style.css dist/style.css",
+    "build:static": "cp src/robots.txt dist/robots.txt && cp src/index.html dist/index.html && cp src/style.css dist/style.css",
     "test": "c8 node -r sucrase/register tests",
     "lint": "eslint ."
   },

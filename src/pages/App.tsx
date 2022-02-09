@@ -1,7 +1,8 @@
 import { h, Component, render } from 'preact';
 import HomePage from './Home';
-import DynamicPage from './Dynamic';
 import SEOPage from './SEO';
+import AboutPage from './About';
+import DynamicPage from './Dynamic';
 import NotFound from './NotFound';
 
 export function App () {
@@ -11,15 +12,21 @@ export function App () {
     )
   }
 
-  if (location.pathname === '/dynamic') {
-    return (
-      <DynamicPage></DynamicPage>
-    )
-  }
-
   if (location.pathname === '/seo') {
     return (
       <SEOPage></SEOPage>
+    )
+  }
+
+  if (location.pathname === '/about') {
+    return (
+      <AboutPage></AboutPage>
+    )
+  }
+
+  if (location.pathname === '/dynamic') {
+    return (
+      <DynamicPage></DynamicPage>
     )
   }
 
