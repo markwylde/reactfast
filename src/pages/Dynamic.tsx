@@ -8,7 +8,7 @@ export function Dynamic () {
   const handleAddItem = () => {
     setItems([
       ...items,
-      'second item'
+      'item ' + (items.length + 1)
     ]);
   };
 

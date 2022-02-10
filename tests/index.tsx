@@ -34,5 +34,5 @@ test('App - adds a new item', async t => {
   await sleep(100);
 
   t.ok(container.textContent?.includes('first item'), 'has first item');
-  t.ok(container.textContent?.includes('second item'), 'has second item');
+  t.ok(container.textContent?.includes('item 2'), 'has second item');
 });
