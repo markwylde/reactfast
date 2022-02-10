@@ -6,25 +6,25 @@ import DynamicPage from './Dynamic';
 import NotFound from './NotFound';
 
 export function App () {
-  if (location.pathname === '/') {
+  if (window.location.pathname === '/') {
     return (
       <HomePage />
     )
   }
 
-  if (location.pathname === '/seo') {
+  if (window.location.pathname === '/seo') {
     return (
       <SEOPage></SEOPage>
     )
   }
 
-  if (location.pathname === '/about') {
+  if (window.location.pathname === '/about') {
     return (
       <AboutPage></AboutPage>
     )
   }
 
-  if (location.pathname === '/dynamic') {
+  if (window.location.pathname === '/dynamic') {
     return (
       <DynamicPage></DynamicPage>
     )

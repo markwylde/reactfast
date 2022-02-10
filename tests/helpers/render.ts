@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
+import * as preact from 'preact';
 import { parseHTML } from 'linkedom';
 
 declare const global: any;
@@ -19,9 +19,13 @@ export function render (component: JSX.Element) {
   global.window = dom.window;
   global.document = dom.document;
 
+  global.window.location = {
+    pathname: '/dynamic'
+  }
+
   const container = dom.document.body.children[0];
 
-  ReactDOM.render(component, container);
+  preact.render(component, container);
 
   function findByText (text: string) {
     const elements = Array.from(
@@ -35,11 +39,10 @@ export function render (component: JSX.Element) {
     )[0];
   }
 
-  return {
-    ...dom,
-    findByText,
-    container
-  };
+  dom.findByText = findByText;
+  dom.container = container;
+
+  return dom;
 }
 
 export default render;

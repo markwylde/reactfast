@@ -18,8 +18,8 @@ export function NotFound () {
         with a 200 status code. But, this isn't exactly great for SEO.
       </p>
       <p>
-        But never fear. There is a <code>meta</code> tag on this page to set
-        <code>robots</code> to <code>noindex</code>. This means Google, and other
+        But never fear. There is a <code>meta</code> tag on this page to 
+        set <code>robots</code> to <code>noindex</code>. This means Google, and other
         compliant search engines, will not index this page.
       </p>
     </div>

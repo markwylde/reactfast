@@ -9,7 +9,7 @@
     "watch": "npm run build:static & esbuild --watch --minify --bundle ./src/index.tsx --outdir=./dist --jsx-factory=h --jsx-fragment=Fragment --loader:.js=jsx",
     "build": "esbuild --minify --bundle ./src/index.tsx --outdir=./dist --jsx-factory=h --jsx-fragment=Fragment --loader:.js=jsx && npm run build:static",
     "build:static": "cp src/robots.txt dist/robots.txt && cp src/index.html dist/index.html && cp src/style.css dist/style.css",
-    "test": "c8 node -r sucrase/register tests",
+    "test": "c8 node -r ./sucrase.js tests",
     "lint": "eslint ."
   },
   "keywords": [],
@@ -29,12 +29,12 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.26.1",
-    "linkedom": "^0.13.2",
     "semistandard": "^16.0.1",
     "servatron": "^2.2.3",
     "sucrase": "^3.20.3"
   },
   "dependencies": {
+    "linkedom": "github:markwylde/linkedom",
     "preact": "^10.6.5"
   },
   "directories": {
