@@ -1,8 +1,8 @@
-import { h, Component, render } from 'preact';
+import { h, Component } from 'preact';
 import Header from '../components/Header';
 
 export function NotFound () {
-  const meta = document.createElement('meta')
+  const meta = document.createElement('meta');
   meta.name = 'robots';
   meta.content = 'noindex';
   document.head.append(meta);
@@ -18,7 +18,7 @@ export function NotFound () {
         with a 200 status code. But, this isn't exactly great for SEO.
       </p>
       <p>
-        But never fear. There is a <code>meta</code> tag on this page to 
+        But never fear. There is a <code>meta</code> tag on this page to
         set <code>robots</code> to <code>noindex</code>. This means Google, and other
         compliant search engines, will not index this page.
       </p>

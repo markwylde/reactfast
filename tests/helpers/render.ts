@@ -21,7 +21,7 @@ export function render (component: JSX.Element) {
 
   global.window.location = {
     pathname: '/dynamic'
-  }
+  };
 
   const container = dom.document.body.children[0];
 

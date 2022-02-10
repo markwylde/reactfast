@@ -1,4 +1,4 @@
-import { h, Component, render } from 'preact';
+import { h, Component } from 'preact';
 import HomePage from './Home';
 import SEOPage from './SEO';
 import AboutPage from './About';
@@ -9,28 +9,28 @@ export function App () {
   if (window.location.pathname === '/') {
     return (
       <HomePage />
-    )
+    );
   }
 
   if (window.location.pathname === '/seo') {
     return (
       <SEOPage></SEOPage>
-    )
+    );
   }
 
   if (window.location.pathname === '/about') {
     return (
       <AboutPage></AboutPage>
-    )
+    );
   }
 
   if (window.location.pathname === '/dynamic') {
     return (
       <DynamicPage></DynamicPage>
-    )
+    );
   }
 
-  return <NotFound />
+  return <NotFound />;
 }
 
 export default App;

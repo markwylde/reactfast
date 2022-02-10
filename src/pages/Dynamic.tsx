@@ -1,4 +1,4 @@
-import { h, Component, render } from 'preact';
+import { h, Component } from 'preact';
 import { useState } from 'preact/hooks';
 import Header from '../components/Header';
 
