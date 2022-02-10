@@ -2,17 +2,26 @@
   "name": "reactfast",
   "version": "1.0.0",
   "description": "A fast and simple way to build testable react apps",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "npm run build && servatron --spa -d dist",
     "develop": "servatron --spa -d dist & npm run watch",
     "watch": "npm run build:static & esbuild --watch --minify --bundle ./src/index.tsx --outdir=./dist --jsx-factory=h --jsx-fragment=Fragment --loader:.js=jsx",
     "build": "esbuild --minify --bundle ./src/index.tsx --outdir=./dist --jsx-factory=h --jsx-fragment=Fragment --loader:.js=jsx && npm run build:static",
     "build:static": "cp src/robots.txt dist/robots.txt && cp src/index.html dist/index.html && cp src/style.css dist/style.css",
-    "test": "c8 node -r ./sucrase.js tests",
+    "test": "c8 node -r ./tools/sucrase.js tests",
     "lint": "eslint ."
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "preact",
+    "compiler",
+    "jsx",
+    "typescript",
+    "testing",
+    "tdd",
+    "spa"
+  ],
   "author": "Mark Wylde <me@markwylde.com> (https://github.com/markwylde)",
   "license": "MIT",
   "devDependencies": {
