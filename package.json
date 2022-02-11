@@ -33,7 +33,7 @@
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-react": "^7.28.0",
-    "linkedom": "github:markwylde/linkedom",
+    "linkedom": "^0.14.0",
     "semistandard": "^16.0.1",
     "servatron": "^2.2.3",
     "settings": "^0.1.1",
