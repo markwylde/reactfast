@@ -5,7 +5,7 @@ A method of building testable react apps that are written in typescript and prom
 ```
 git clone https://github.com/markwylde/reactfast.git
 cd reactfast
-npm i
+npm install
 ```
 
 ## Starting
@@ -36,7 +36,7 @@ This will give you coverage checking and run all your tests.
 However, during TDD, you will probably want a faster iteration:
 
 ```
-node -r sucrase/register tests
+node -r ./tools/sucrase.js tests
 ```
 
 This will run the two example tests in around 0.2 seconds.
