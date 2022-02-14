@@ -6,20 +6,23 @@ import App from '../src/pages/App';
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-test('App - has header', t => {
+test('App - has header', async t => {
   t.plan(1);
 
   const { container } = render(<App />);
 
-  t.ok(container.textContent?.includes('ReactFast'), 'has header');
+  await t.waitFor(() => {
+    t.ok(container.textContent?.includes('ReactFast'), 'has header');
+  })
 });
 
-test('App - has default first item', t => {
+test('App - has default first item', async t => {
   t.plan(1);
 
   const { container } = render(<App />);
-
-  t.ok(container.textContent?.includes('first item'), 'has first item');
+  await t.waitFor(() => {
+    t.ok(container.textContent?.includes('first item'), 'has first item');
+  });
 });
 
 test('App - adds a new item', async t => {
@@ -27,8 +30,11 @@ test('App - adds a new item', async t => {
 
   const { container, findByText, Event } = render(<App />);
 
-  const addButton = findByText('Add Item');
+  await t.waitFor(() => {
+    t.ok(findByText('Add Item'));
+  });
 
+  const addButton = findByText('Add Item');
   addButton.dispatchEvent(new Event('click'));
 
   await sleep(100);

@@ -1,36 +1,38 @@
 import { h, Component } from 'preact';
-import HomePage from './Home';
-import SEOPage from './SEO';
-import AboutPage from './About';
-import DynamicPage from './Dynamic';
-import NotFound from './NotFound';
+import { useEffect, useState } from 'preact/hooks';
 
-export function App () {
+async function getPageByPathname (pathname) {
   if (window.location.pathname === '/') {
-    return (
-      <HomePage />
-    );
+    return (await import('./Home')).default
   }
 
   if (window.location.pathname === '/seo') {
-    return (
-      <SEOPage></SEOPage>
-    );
+    return (await import('./SEO')).default
   }
 
   if (window.location.pathname === '/about') {
-    return (
-      <AboutPage></AboutPage>
-    );
+    return (await import('./About')).default
   }
 
   if (window.location.pathname === '/dynamic') {
-    return (
-      <DynamicPage></DynamicPage>
-    );
+    return (await import('./Dynamic')).default
   }
 
-  return <NotFound />;
+  return (await import('./NotFound')).default
+}
+
+export function App () {
+  const [page, setPage] = useState(null);
+  const Component = page?.Component;
+
+  useEffect(() => {
+    getPageByPathname(window.location.pathname)
+      .then(newPage => {
+        setPage({ Component: newPage });
+      })
+  }, [window.location.pathname])
+
+  return Component && <Component />
 }
 
 export default App;
