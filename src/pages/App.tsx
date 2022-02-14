@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
-
+import LoadingPage from './Loading';
+''
 async function getPageByPathname (pathname) {
   if (window.location.pathname === '/') {
     return (await import('./Home')).default
@@ -22,7 +23,7 @@ async function getPageByPathname (pathname) {
 }
 
 export function App () {
-  const [page, setPage] = useState(null);
+  const [page, setPage] = useState({ Component: LoadingPage });
   const Component = page?.Component;
 
   useEffect(() => {

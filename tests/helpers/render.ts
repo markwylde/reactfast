@@ -39,10 +39,12 @@ export function render (component: JSX.Element) {
     )[0];
   }
 
-  dom.findByText = findByText;
-  dom.container = container;
-
-  return dom;
+  return {
+    findByText: findByText,
+    container: container,
+    Event: dom.Event,
+    ...dom
+  }
 }
 
 export default render;
