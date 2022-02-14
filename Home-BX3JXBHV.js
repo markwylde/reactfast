@@ -1,0 +1,1 @@
+import{a as t}from"./chunk-H7UMT2WU.js";import{b as e}from"./chunk-5OW3YEFS.js";function o(){return e("div",null,e(t,null),e("h1",null,"What's this all about then?"),e("p",null,"This is an example of a small, lightweight, fast React project that doesn't need to be server rendered."))}var n=o;export{o as HomePage,n as default};
