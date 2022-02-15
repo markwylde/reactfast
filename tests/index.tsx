@@ -2,7 +2,7 @@ import { h, Component } from 'preact';
 import test from 'basictap';
 
 import render from './helpers/render';
-import App from '../src/pages/App';
+import App from '../src/App';
 
 test('App - has header', async t => {
   t.plan(1);
