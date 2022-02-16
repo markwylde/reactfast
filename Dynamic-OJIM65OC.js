@@ -1,0 +1,2 @@
+import{a as i}from"./chunk-LLSNI6KO.js";import{b as t,d as m}from"./chunk-Z7FM7WIK.js";function l(){let[e,o]=i(["first item"]),n=()=>{o([...e,"item "+(e.length+1)])};return t("div",null,t(m,null),t("h1",null,"Does it handle interactivity?"),t("div",null,"Items:"),t("ul",null,e.map((d,r)=>t("li",{key:r},d))),t("button",{onClick:n},"Add Item"))}var c=l;export{c as default};
+//# sourceMappingURL=Dynamic-OJIM65OC.js.map
