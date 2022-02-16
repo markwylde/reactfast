@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import Header from '../components/Header';
+import Header from '../components/Header.tsx';
 
 export function SEO () {
   return (

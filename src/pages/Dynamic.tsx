@@ -1,8 +1,8 @@
-import { h, Component } from 'preact';
+import { h } from 'preact';
 import { useState } from 'preact/hooks';
-import Header from '../components/Header';
+import Header from '../components/Header.tsx';
 
-export function Dynamic () {
+function Dynamic () {
   const [items, setItems] = useState(['first item']);
 
   const handleAddItem = () => {

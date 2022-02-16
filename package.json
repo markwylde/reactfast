@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "A fast and simple way to build testable react apps",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "start": "npm run build && servatron --spa -d dist",
-    "develop": "servatron --spa -d dist & npm run watch",
-    "watch": "npm run build:static & esbuild --splitting --format=esm --watch --bundle ./src/index.tsx --outdir=./dist --jsx-factory=h --jsx-fragment=Fragment --loader:.js=jsx",
-    "build": "esbuild --splitting --format=esm --minify --bundle ./src/index.tsx --outdir=./dist --jsx-factory=h --jsx-fragment=Fragment --loader:.js=jsx && npm run build:static",
-    "build:static": "cp src/robots.txt dist/robots.txt && cp src/index.html dist/index.html && cp src/style.css dist/style.css",
-    "test": "c8 node -r ./tools/sucrase.js tests",
+    "start": "./scripts/watch.js & servatron --spa -d dist",
+    "watch": "./scripts/watch.js",
+    "build": "./scripts/build.js",
+    "test": "c8 node --experimental-loader ./tests/helpers/hook.js tests/index.tsx",
     "lint": "eslint ."
   },
   "keywords": [
@@ -27,17 +26,17 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
-    "basictap": "^3.2.1",
+    "basictap": "^3.2.2",
     "c8": "^7.11.0",
+    "chokidar": "^3.5.3",
     "esbuild": "^0.14.21",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-react": "^7.28.0",
+    "glob": "^7.2.0",
     "linkedom": "^0.14.1",
     "semistandard": "^16.0.1",
-    "servatron": "^2.2.3",
-    "settings": "^0.1.1",
-    "sucrase": "^3.20.3"
+    "servatron": "^2.2.3"
   },
   "dependencies": {
     "preact": "^10.6.6"

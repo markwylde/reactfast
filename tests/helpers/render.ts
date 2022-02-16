@@ -44,7 +44,7 @@ export function render (component: JSX.Element) {
     container: container,
     Event: dom.Event,
     ...dom
-  }
+  };
 }
 
 export default render;

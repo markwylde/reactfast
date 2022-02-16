@@ -1,40 +1,41 @@
 import { h, Component } from 'preact';
 import test from 'basictap';
 
-import render from './helpers/render';
-import App from '../src/App';
+import render from './helpers/render.ts';
+import App from '../src/App.tsx';
 
 test('App - has header', async t => {
   t.plan(1);
 
-  const { container } = render(<App />);
+  const { findByText } = render(<App />);
 
   await t.waitFor(() => {
-    t.ok(container.textContent?.includes('ReactFast'), 'has header');
-  })
+    t.ok(findByText('ReactFast'));
+  });
 });
 
 test('App - has default first item', async t => {
   t.plan(1);
 
-  const { container } = render(<App />);
+  const { findByText } = render(<App />);
   await t.waitFor(() => {
-    t.ok(container.textContent?.includes('first item'), 'has first item');
+    t.ok(findByText('ReactFast'), 'has first item');
   });
 });
 
 test('App - adds a new item', async t => {
   t.plan(2);
 
-  const { container, findByText, Event } = render(<App />);
+  const { findByText, Event } = render(<App />);
 
   await t.waitFor(() => {
-    t.ok(findByText('Add Item'));
+    t.ok(findByText('first item'), 'has first item');
   });
 
   const addButton = findByText('Add Item');
   addButton.dispatchEvent(new Event('click'));
 
-  t.ok(container.textContent?.includes('first item'), 'has first item');
-  t.ok(container.textContent?.includes('item 2'), 'has second item');
+  await t.waitFor(() => {
+    t.ok(findByText('item 2'), 'has second item');
+  });
 });

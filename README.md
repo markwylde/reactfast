@@ -36,7 +36,7 @@ This will give you coverage checking and run all your tests.
 However, during TDD, you will probably want a faster iteration:
 
 ```
-node -r ./tools/sucrase.js tests
+node --experimental-loader ./tests/helpers/hook.js tests/index.tsx
 ```
 
 This will run the two example tests in around 0.2 seconds.
