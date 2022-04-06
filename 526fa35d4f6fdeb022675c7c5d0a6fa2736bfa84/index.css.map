@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.css"],
+  "sourcesContent": [".header > span {\n  font-weight: bold;\n}\n\n.header nav ul {\n  padding: 0;\n  margin: 0 0 0 -9px;\n}\n\n.header nav ul li:not(:last-child):after {\n  content: '';\n  border-right: 1px solid black;\n}\n.header nav ul li {\n  display: inline-block;\n}\n\n.header nav ul li a {\n  text-decoration: none;\n  display: inline-block;\n  padding: 8px;\n  margin: 2px;\n  background-color: white;\n  border-radius: 3px;\n}\n\n.header nav ul li a:hover {\n  text-decoration: underline;\n}\n"],
+  "mappings": ";AAAA;AACE;AAAA;AAGF;AACE;AACA;AAAA;AAGF;AACE;AACA;AAAA;AAEF;AACE;AAAA;AAGF;AACE;AACA;AACA;AACA;AACA;AACA;AAAA;AAGF;AACE;AAAA;",
+  "names": []
+}
