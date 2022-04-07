@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/pages/Home.tsx"],
+  "sourcesContent": ["import { h, Component } from 'preact';\nimport Header from '../components/Header.tsx';\n\nexport function HomePage () {\n  return (\n    <div>\n      <Header />\n      <h1>What's this all about then my?</h1>\n      <p>\n        This is an example of a small, lightweight, fast\n        React project that doesn't need to be server rendered.\n      </p>\n    </div>\n  );\n}\n\nexport default HomePage;\n"],
+  "mappings": "+CAGO,YAAqB,CAC1B,MACE,GAAC,WACC,EAAC,MAAO,EACR,EAAC,UAAG,gCAA8B,EAClC,EAAC,SAAE,yGAGH,CACF,CAEJ,CAEA,GAAO,GAAQ",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/pages/About.tsx"],
+  "sourcesContent": ["import { h, Component } from 'preact';\nimport Header from '../components/Header.tsx';\n\nexport function AboutPage () {\n  return (\n    <div>\n      <Header />\n      <h1>About this site</h1>\n      <p>\n        I believe that we can build amazing, fast, lightweight websites using\n        entirely client rendered code, without any server side rendering.\n      </p>\n      <p>\n        This is a demonstration of a site that is search engine optimised, will\n        be indexed well by Google, and score highly in the lighthouse and core\n        web vital tests.\n      </p>\n      <p>\n        In many cases your site will score higher than with server rendering,\n        because you can host the entire thing on a CDN.\n      </p>\n    </div>\n  );\n}\n\nexport default AboutPage;\n"],
+  "mappings": "+CAGO,YAAsB,CAC3B,MACE,GAAC,WACC,EAAC,MAAO,EACR,EAAC,UAAG,iBAAe,EACnB,EAAC,SAAE,yIAGH,EACA,EAAC,SAAE,iKAIH,EACA,EAAC,SAAE,uHAGH,CACF,CAEJ,CAEA,GAAO,GAAQ",
+  "names": []
+}

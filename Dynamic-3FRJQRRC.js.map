@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/pages/Dynamic.tsx"],
+  "sourcesContent": ["import { h } from 'preact';\nimport { useState } from 'preact/hooks';\nimport Header from '../components/Header.tsx';\n\nfunction Dynamic () {\n  const [items, setItems] = useState(['first item']);\n\n  const handleAddItem = () => {\n    setItems([\n      ...items,\n      'item ' + (items.length + 1)\n    ]);\n  };\n\n  return (\n    <div>\n      <Header />\n      <h1>Does it handle interactivity?</h1>\n      <div>Items:</div>\n      <ul>\n        {items.map((item, itemIndex) => <li key={itemIndex}>{item}</li>)}\n      </ul>\n      <button onClick={handleAddItem}>Add Item</button>\n    </div>\n  );\n}\n\nexport default Dynamic;\n"],
+  "mappings": "uFAIA,YAAoB,CAClB,GAAM,CAAC,EAAO,GAAY,EAAS,CAAC,YAAY,CAAC,EAE3C,EAAgB,IAAM,CAC1B,EAAS,CACP,GAAG,EACH,QAAW,GAAM,OAAS,EAC5B,CAAC,CACH,EAEA,MACE,GAAC,WACC,EAAC,MAAO,EACR,EAAC,UAAG,+BAA6B,EACjC,EAAC,WAAI,QAAM,EACX,EAAC,UACE,EAAM,IAAI,CAAC,EAAM,IAAc,EAAC,MAAG,IAAK,GAAY,CAAK,CAAK,CACjE,EACA,EAAC,UAAO,QAAS,GAAe,UAAQ,CAC1C,CAEJ,CAEA,GAAO,GAAQ",
+  "names": []
+}
