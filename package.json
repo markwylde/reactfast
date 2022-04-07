@@ -24,22 +24,22 @@
   "author": "Mark Wylde <me@markwylde.com> (https://github.com/markwylde)",
   "license": "MIT",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
-    "basictap": "^3.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "basictap": "^3.2.3",
     "c8": "^7.11.0",
     "chokidar": "^3.5.3",
-    "esbuild": "^0.14.21",
+    "esbuild": "^0.14.34",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-react": "^7.28.0",
     "glob": "^7.2.0",
-    "linkedom": "^0.14.1",
+    "linkedom": "^0.14.5",
     "semistandard": "^16.0.1",
-    "servatron": "^2.2.3"
+    "servatron": "^2.3.0"
   },
   "dependencies": {
-    "preact": "^10.6.6"
+    "preact": "^10.7.1"
   },
   "directories": {
     "dist": "dists"
