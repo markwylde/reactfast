@@ -1,6 +1,6 @@
 {
   "name": "reactfast",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A fast and simple way to build testable react apps",
   "main": "src/index.js",
   "type": "module",
