@@ -2,9 +2,9 @@ import fs from 'fs';
 import { fileURLToPath } from 'node:url';
 import esbuild from 'esbuild';
 
-export async function load (url, context, defaultLoad) {
-  if (url.endsWith('.tsx')) {
-    const pathname = fileURLToPath(url);
+export async function load (specifier, context, nextResolve) {
+  if (specifier.endsWith('.tsx')) {
+    const pathname = fileURLToPath(specifier);
     const contents = fs.readFileSync(pathname, 'utf8');
 
     const result = await esbuild.transform(contents, {
@@ -12,25 +12,27 @@ export async function load (url, context, defaultLoad) {
       jsxFactory: 'h'
     });
 
-    return {
+    return nextResolve(specifier, {
+      ...context,
       format: 'module',
       source: result.code
-    };
+    });
   }
 
-  if (url.endsWith('.ts')) {
-    const pathname = fileURLToPath(url);
+  if (specifier.endsWith('.ts')) {
+    const pathname = fileURLToPath(specifier);
     const contents = fs.readFileSync(pathname, 'utf8');
 
     const result = await esbuild.transform(contents, {
       loader: 'ts'
     });
 
-    return {
+    return nextResolve(specifier, {
+      ...context,
       format: 'module',
       source: result.code
-    };
+    });
   }
 
-  return defaultLoad(url, context, defaultLoad);
+  return nextResolve(specifier, context, nextResolve);
 }
