@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/pages/SEO.tsx"],
+  "sourcesContent": ["import { h, Component } from 'preact';\nimport Header from '../components/Header.tsx';\n\nexport function SEO () {\n  return (\n    <div>\n      <Header />\n      <h1>How does SEO work?</h1>\n      <p>\n        Yeah, SEO is fine with this app. But you need to make sure\n        you use a host/cdn that is capabile of always returning an\n        index.html page with 200 status.\n      </p>\n    </div>\n  );\n}\n\nexport default SEO;\n"],
+  "mappings": "+CAGO,SAASA,GAAO,CACrB,OACEC,EAAC,WACCA,EAACC,EAAA,IAAO,EACRD,EAAC,UAAG,oBAAkB,EACtBA,EAAC,SAAE,wJAIH,CACF,CAEJ,CAEA,IAAOE,EAAQH",
+  "names": ["SEO", "h", "Header_default", "SEO_default"]
+}
