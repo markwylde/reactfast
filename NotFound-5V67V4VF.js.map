@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/pages/NotFound.tsx"],
+  "sourcesContent": ["import { h, Component } from 'preact';\nimport Header from '../components/Header.tsx';\n\nexport function NotFound () {\n  const meta = document.createElement('meta');\n  meta.name = 'robots';\n  meta.content = 'noindex';\n  document.head.append(meta);\n\n  return (\n    <div>\n      <Header />\n      <h1>Page Not Found</h1>\n      <p>The page you are trying to access could not be found.</p>\n      <h2>Curious about SEO?</h2>\n      <p>\n        This page (like every page on the site) is returned from the server\n        with a 200 status code. But, this isn't exactly great for SEO.\n      </p>\n      <p>\n        But never fear. There is a <code>meta</code> tag on this page to\n        set <code>robots</code> to <code>noindex</code>. This means Google, and other\n        compliant search engines, will not index this page.\n      </p>\n    </div>\n  );\n}\n\nexport default NotFound;\n"],
+  "mappings": "+CAGO,SAASA,GAAY,CAC1B,IAAMC,EAAO,SAAS,cAAc,MAAM,EAC1C,OAAAA,EAAK,KAAO,SACZA,EAAK,QAAU,UACf,SAAS,KAAK,OAAOA,CAAI,EAGvBC,EAAC,WACCA,EAACC,EAAA,IAAO,EACRD,EAAC,UAAG,gBAAc,EAClBA,EAAC,SAAE,uDAAqD,EACxDA,EAAC,UAAG,oBAAkB,EACtBA,EAAC,SAAE,oIAGH,EACAA,EAAC,SAAE,8BAC0BA,EAAC,YAAK,MAAI,EAAO,4BACxCA,EAAC,YAAK,QAAM,EAAO,OAAIA,EAAC,YAAK,SAAO,EAAO,oFAEjD,CACF,CAEJ,CAEA,IAAOE,EAAQJ",
+  "names": ["NotFound", "meta", "h", "Header_default", "NotFound_default"]
+}
